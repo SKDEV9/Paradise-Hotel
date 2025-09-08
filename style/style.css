@@ -26,7 +26,7 @@ body {
 
 
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -166,4 +166,66 @@ button.primary {
 .hero p {
   position: relative;  /* garante que o texto fique acima da camada escura */
   z-index: 2;
+}
+
+
+/* Define o espaçamento da seção inteira */
+.about-us {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+
+/* O container que vai alinhar os itens lado a lado */
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    display: flex;
+    gap: 60px;
+    align-items: center; /* Alinha verticalmente o texto e a imagem */
+}
+
+
+/* Define que cada coluna (texto e imagem) vai ocupar metade do espaço */
+.about-us-text,
+.about-us-image {
+    flex: 1; /* Cada item ocupa uma fração igual do espaço */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estilo para a imagem preencher o container dela */
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-us-text h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-us-text p {
+    font-family: var(--fonte-texto);
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-us-text a {
+    align-self:center;
+    margin-top: 20px;
+    font-family: var(--fonte-texto);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.about-us-text a:hover {
+    color: var(--cor-principal);
+    text-decoration: underline;
 }
