@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --cor-principal: #1848D9;
+    --cor-secundaria: #0F168C;
+    --cor-terciaria: #0F168C;
+    --cor--teste: #0F168C;
+
+    --fonte-titulo: "Playfair Display SC", serif;
+    --fonte-texto: "Montserrat", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Garante que tudo respeite o tamanho da caixa */
+* {
+    box-sizing: border-box;
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.055);
+    z-index: 10; /* Garante que a navbar fique sobre o conteúdo */
+}
+
+
+/* Container da navbar */
+.navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;  /* Necessário para posicionamento absoluto dos links */
+}
+
+.navbar-logo {
+    grid-column: 1;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 11; /* Garante que a logo fique acima dos links */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+}
+
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar-links li a:hover {
+    color: var(--cor-principal);
+}
+
+
+.hero {
+    display: grid;
+    place-items: center;
+    height: 70vh;
+    background: url('../images/hotel-main.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.205);
+}
+
+
+.hero-content  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: var(--fonte-titulo);
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
+
+.hero-content p {
+    font-family: var(--fonte-texto);
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: 1.8rem; 
+}
+
+
+/* Botões lado a lado com Flex */
+.hero-buttons {
+    display: flex;
+    gap: 30px; 
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+
+/* Estilo dos botões */
+button.btn {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    font-size: 1.0rem;
+    width: 220px;
+    height: 60px;
+    border-radius: 8px;
+    position: relative;
+}
+
+
+button.primary {
+    background: white;
+    color: black;
+}
+
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+
+.hero h1,
+.hero p {
+  position: relative;  /* garante que o texto fique acima da camada escura */
+  z-index: 2;
+}
