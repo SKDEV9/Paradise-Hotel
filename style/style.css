@@ -30,8 +30,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 0;
-    background: rgba(0, 0, 0, 0.055);
+    background-color: white;
+    padding: 5px 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.212);
     z-index: 10; /* Garante que a navbar fique sobre o conteúdo */
 }
 
@@ -40,50 +41,43 @@ body {
 .navbar-container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     position: relative;  /* Necessário para posicionamento absoluto dos links */
 }
 
 .navbar-logo {
-    grid-column: 1;
-    color: white;
-    font-size: 2rem;
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-    z-index: 11; /* Garante que a logo fique acima dos links */
+    color: var(--cor-principal)
 }
 
 .navbar-links {
     list-style: none;
     display: flex;
-    gap: 60px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 50%;
+    gap: 50px;
 }
 
 
-.navbar-links li a {
-    color: white;
+.navbar-links a {
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: bold;
+    color: black
 }
 
-.navbar-links li a:hover {
-    color: var(--cor-principal);
-}
 
+.navbar-links a:hover {
+    color: #1848D9;
+}
 
 .hero {
     display: grid;
     place-items: center;
-    height: 70vh;
+    height: 80vh;
     background: url('../images/hotel-main.png') no-repeat center center;
     background-size: cover;
     color: white;
